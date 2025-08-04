@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Widget Demo</title>
+
+  <!-- Animate CSS from Chatteron -->
+  <link rel="stylesheet" href="https://s3.chatteron.io/chatteron.io/public/bots/5c1a194cec95960019188cbb/animate.min.css">
+
+  <style>
+    .chatBubble {
+      -webkit-animation: bounce 3s;
+      animation: bounce 3s;
+      animation-iteration-count: 1;
+    }
+
+    .chatBubble:hover {
+      -webkit-animation: shake 12s;
+      animation: shake 12s;
+      animation-iteration-count: infinite;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chat Widget Demo</h1>
+
+  <script defer>
+    function loadChatWidget() {
+      chatteron.init({
+        clientId: "47FSWacj1c-ENrSIs0EWa", // Replace with your actual clientId if needed
+      });
+
+      setTimeout(function () {
+        const chatBubble = document.querySelector('.chatteron-launcher');
+        if (chatBubble) {
+          chatBubble.classList.add('chatBubble');
+        }
+        chatteron.openChatWindow();
+      }, 3000);
+    }
+  </script>
+
+  <script defer src="https://web.leena.ai/scripts/sdk.js" onload="loadChatWidget();"></script>
+</body>
+</html>
