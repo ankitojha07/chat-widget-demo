@@ -8,13 +8,13 @@
   <!-- Animate CSS from Chatteron -->
   <link rel="stylesheet" href="https://s3.chatteron.io/chatteron.io/public/bots/5c1a194cec95960019188cbb/animate.min.css">
 
-  <style>
+    <style>
     .chatBubble {
       -webkit-animation: bounce 3s;
       animation: bounce 3s;
       animation-iteration-count: 1;
     }
-
+  
     .chatBubble:hover {
       -webkit-animation: shake 12s;
       animation: shake 12s;
@@ -28,20 +28,18 @@
   <script defer>
     function loadChatWidget() {
       chatteron.init({
-        clientId: "S48lbTtSVmnV0VfDzq0o0",// Replace with your actual clientId if needed
-        bubbleUrl:"https://bots.leena.ai/api/bots/67f760290fbd794e894367ae/assets/689088db3e6688c797830c2c/brigade%20image.png"
+        clientId: "e55XvwIwIqZ0NUmaVaTzJ",
+        bubbleUrl: "https://hm-s3.leena.ai/chatteron.io/public/bots/6466291dc91aa6e86a14b300/attachment-1eLhMUZZum/Houston%20Bot_250x250.png",
+        theme: {
+          bubble: {
+            bottom: '105px',
+          },
+        },
+        height: 550,
       });
-
-      setTimeout(function () {
-        const chatBubble = document.querySelector('.chatteron-launcher');
-        if (chatBubble) {
-          chatBubble.classList.add('chatBubble');
-        }
-        chatteron.openChatWindow();
-      }, 3000);
     }
   </script>
-
-  <script defer src="https://web.leena.ai/scripts/sdk.js" onload="loadChatWidget();"></script>
+  <script defer src="https://web.leena.ai/scripts/sdk.js" onLoad="loadChatWidget();"></script>
+  <link rel="stylesheet" href="https://s3.chatteron.io/chatteron.io/public/bots/5c1a194cec95960019188cbb/animate.min.css" />
 </body>
 </html>
